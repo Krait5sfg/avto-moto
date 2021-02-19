@@ -17,6 +17,11 @@
   text-decoration: none;
   color: white;
 
+  &:hover,
+  &:focus {
+    background-color: #bd0c21;
+  }
+
   &--white-long {
     width: 222px;
 
@@ -26,4 +31,10 @@
 
     background-color: transparent;
   }
+}
+
+.button--white-long:hover,
+.button--white-long:focus {
+  background-color: #d12136;
+  color: #ffffff;
 }

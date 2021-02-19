@@ -17,4 +17,9 @@
   line-height: 22px;
   color: #48494d;
   text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: rgba(72, 73, 77, 0.8);
+  }
 }
