@@ -19,9 +19,9 @@
 
   <div class="hidden">
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-arrow-left" viewBox="0 0 20 13">
-<path d="M1.00427 6.17188L6.91841 0.368597M1.00427 6.17188L6.69294 11.9692M1.00427 6.17188L19.9813 6.35128" stroke="#D7D9DF"></path>
+<path d="M1.00427 6.17188L6.91841 0.368597M1.00427 6.17188L6.69294 11.9692M1.00427 6.17188L19.9813 6.35128"></path>
 </symbol><symbol id="icon-arrow-right" viewBox="0 0 20 13">
-<path d="M18.9873 6.17188L13.0747 0.368597M18.9873 6.17188L13.3001 11.9692M18.9873 6.17188L0.0150977 6.35128" stroke="#48494D"></path>
+<path d="M18.9873 6.17188L13.0747 0.368597M18.9873 6.17188L13.3001 11.9692M18.9873 6.17188L0.0150977 6.35128"></path>
 </symbol><symbol id="icon-engine" viewBox="0 0 53 40">
 <g opacity="0.5">
 <rect x="16.746" y="10.75" width="10.9495" height="19.9131" rx="1.25" stroke="#48494D" stroke-width="1.5"></rect>
@@ -143,7 +143,68 @@
     </div>
   </header>
 
+  <section class="goods">
+    <h1 class="visually-hidden">Сайт Авто Мото</h1>
+    <h2 class="visually-hidden">Секция с изображением и описанием автомобиля</h2>
+    <div class="goods__wrapper">
 
+      <!-- slider -->
+      <div class="goods__left-block slider">
+        <!-- block for big images -->
+        <div class="slider__main-image-block slider__main-image-block--new-model">
+          <picture>
+            <source type="image/webp" srcset="img/black-car@1x.webp 1x, img/black-car@2x.webp 2x">
+            <img class="slider__image" src="img/black-car@1x.jpg" srcset="img/black-car@2x.jpg 2x" alt="Марпех 11, вид снаружи" width="600" height="375">
+          </picture>
+          <picture>
+            <source type="image/webp" srcset="img/desktop-car@1x.webp 1x, img/desktop-car@2x.webp 2x">
+            <img class="slider__image hidden" src="img/desktop-car@1x.jpg" srcset="img/desktop-car@2x.jpg 2x" alt="Марпех 11, вид приборной панели" width="600" height="375">
+          </picture>
+          <picture>
+            <source type="image/webp" srcset="img/desktop-speedo@1x.webp 1x, img/desktop-speedo@2x.webp 2x">
+            <img class="slider__image hidden" src="img/desktop-speedo@1x.jpg" srcset="img/desktop-speedo@2x.jpg 2x" alt="Марпех 11, вид спидометра" width="600" height="375">
+          </picture>
+        </div>
+        <!-- block for small images -->
+        <ul class="slider__list">
+          <li class="slider__arrow slider__arrow--left">
+            <svg class="slider__not-active-arrow" width="20" height="20">
+              <use xlink:href="#icon-arrow-left"></use>
+            </svg>
+          </li>
+          <li class="slider__item">
+            <picture>
+              <source type="image/webp" srcset="img/black-car-mini@1x.webp 1x, img/black-car-mini@2x.webp 2x">
+              <img class="slider__image" src="img/black-car-mini@1x.jpg" srcset="img/black-car-mini@2x.jpg 2x" alt="Марпех 11, вид снаружи, маленькое изображение" width="128" height="80">
+            </picture>
+          </li>
+          <li class="slider__item">
+            <picture>
+              <source type="image/webp" srcset="img/desktop-car-mini@1x.webp 1x, img/desktop-car-mini@2x.webp 2x">
+              <img class="slider__image" src="img/desktop-car-mini@1x.jpg" srcset="img/desktop-car-mini@2x.jpg 2x" alt="Марпех 11, вид приборной панели, маленькое изображение" width="128" height="80">
+            </picture>
+          </li>
+          <li class="slider__item">
+            <picture>
+              <source type="image/webp" srcset="img/desktop-speedo-mini@1x.webp 1x, img/desktop-speedo-mini@2x.webp 2x">
+              <img class="slider__image" src="img/desktop-speedo-mini@1x.jpg" srcset="img/desktop-speedo-mini@2x.jpg 2x" alt="Марпех 11, вид спидометра, маленькое изображение" width="128" height="80">
+            </picture>
+          </li>
+          <li class="slider__arrow slider__arrow--right">
+            <svg class="slider__active-arrow" width="20" height="20">
+              <use xlink:href="#icon-arrow-right"></use>
+            </svg>
+          </li>
+        </ul>
+      </div>
+
+      <!-- goods description -->
+      <div class="goods__right-block">
+        <!-- ********* -->
+        <p class="goods__title">Марпех 11</p>
+      </div>
+    </div>
+  </section>
 </body>
 
 </html>

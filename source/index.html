@@ -49,7 +49,74 @@
     </div>
   </header>
 
+  <section class="goods">
+    <h1 class="visually-hidden">Сайт Авто Мото</h1>
+    <h2 class="visually-hidden">Секция с изображением и описанием автомобиля</h2>
+    <div class="goods__wrapper">
 
+      <!-- slider -->
+      <div class="goods__left-block slider">
+        <!-- block for big images -->
+        <div class="slider__main-image-block slider__main-image-block--new-model">
+          <picture>
+            <source type="image/webp" srcset="img/black-car@1x.webp 1x, img/black-car@2x.webp 2x">
+            <img class="slider__image" src="img/black-car@1x.jpg" srcset="img/black-car@2x.jpg 2x"
+              alt="Марпех 11, вид снаружи" width="600" height="375">
+          </picture>
+          <picture>
+            <source type="image/webp" srcset="img/desktop-car@1x.webp 1x, img/desktop-car@2x.webp 2x">
+            <img class="slider__image hidden" src="img/desktop-car@1x.jpg" srcset="img/desktop-car@2x.jpg 2x"
+              alt="Марпех 11, вид приборной панели" width="600" height="375">
+          </picture>
+          <picture>
+            <source type="image/webp" srcset="img/desktop-speedo@1x.webp 1x, img/desktop-speedo@2x.webp 2x">
+            <img class="slider__image hidden" src="img/desktop-speedo@1x.jpg" srcset="img/desktop-speedo@2x.jpg 2x"
+              alt="Марпех 11, вид спидометра" width="600" height="375">
+          </picture>
+        </div>
+        <!-- block for small images -->
+        <ul class="slider__list">
+          <li class="slider__arrow slider__arrow--left">
+            <svg class="slider__not-active-arrow" width="20" height="20">
+              <use xlink:href="#icon-arrow-left"></use>
+            </svg>
+          </li>
+          <li class="slider__item">
+            <picture>
+              <source type="image/webp" srcset="img/black-car-mini@1x.webp 1x, img/black-car-mini@2x.webp 2x">
+              <img class="slider__image" src="img/black-car-mini@1x.jpg" srcset="img/black-car-mini@2x.jpg 2x"
+                alt="Марпех 11, вид снаружи, маленькое изображение" width="128" height="80">
+            </picture>
+          </li>
+          <li class="slider__item">
+            <picture>
+              <source type="image/webp" srcset="img/desktop-car-mini@1x.webp 1x, img/desktop-car-mini@2x.webp 2x">
+              <img class="slider__image" src="img/desktop-car-mini@1x.jpg" srcset="img/desktop-car-mini@2x.jpg 2x"
+                alt="Марпех 11, вид приборной панели, маленькое изображение" width="128" height="80">
+            </picture>
+          </li>
+          <li class="slider__item">
+            <picture>
+              <source type="image/webp" srcset="img/desktop-speedo-mini@1x.webp 1x, img/desktop-speedo-mini@2x.webp 2x">
+              <img class="slider__image" src="img/desktop-speedo-mini@1x.jpg" srcset="img/desktop-speedo-mini@2x.jpg 2x"
+                alt="Марпех 11, вид спидометра, маленькое изображение" width="128" height="80">
+            </picture>
+          </li>
+          <li class="slider__arrow slider__arrow--right">
+            <svg class="slider__active-arrow" width="20" height="20">
+              <use xlink:href="#icon-arrow-right"></use>
+            </svg>
+          </li>
+        </ul>
+      </div>
+
+      <!-- goods description -->
+      <div class="goods__right-block">
+        <!-- ********* -->
+        <p class="goods__title">Марпех 11</p>
+      </div>
+    </div>
+  </section>
 </body>
 
 </html>

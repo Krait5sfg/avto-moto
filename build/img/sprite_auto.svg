@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-arrow-left" viewBox="0 0 20 13">
-<path d="M1.00427 6.17188L6.91841 0.368597M1.00427 6.17188L6.69294 11.9692M1.00427 6.17188L19.9813 6.35128" stroke="#D7D9DF"/>
+<path d="M1.00427 6.17188L6.91841 0.368597M1.00427 6.17188L6.69294 11.9692M1.00427 6.17188L19.9813 6.35128"/>
 </symbol><symbol id="icon-arrow-right" viewBox="0 0 20 13">
-<path d="M18.9873 6.17188L13.0747 0.368597M18.9873 6.17188L13.3001 11.9692M18.9873 6.17188L0.0150977 6.35128" stroke="#48494D"/>
+<path d="M18.9873 6.17188L13.0747 0.368597M18.9873 6.17188L13.3001 11.9692M18.9873 6.17188L0.0150977 6.35128"/>
 </symbol><symbol id="icon-engine" viewBox="0 0 53 40">
 <g opacity="0.5">
 <rect x="16.746" y="10.75" width="10.9495" height="19.9131" rx="1.25" stroke="#48494D" stroke-width="1.5"/>

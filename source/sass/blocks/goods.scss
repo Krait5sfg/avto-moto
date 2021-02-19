@@ -1,0 +1,16 @@
+.goods__wrapper {
+  display: flex;
+  max-width: $desktop-width;
+  margin: 0 auto;
+  padding: 0 13px;
+  padding-top: 90px;
+
+  @media (max-width: $min-content-width) {
+    width: $min-content-width;
+  }
+}
+
+.goods__title {
+  margin: 0;
+  padding: 0;
+}
