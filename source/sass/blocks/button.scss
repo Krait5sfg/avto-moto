@@ -31,10 +31,22 @@
 
     background-color: transparent;
   }
+
+  &--white-short {
+    width: 189px;
+
+    color: #d12136;
+
+    border: 1px solid #d12136;
+
+    background-color: transparent;
+  }
 }
 
 .button--white-long:hover,
-.button--white-long:focus {
+.button--white-long:focus,
+.button--white-short:hover,
+.button--white-short:focus {
   background-color: #d12136;
   color: #ffffff;
 }
