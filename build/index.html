@@ -12,6 +12,8 @@
   <link rel="preload" href="fonts/OpenSans-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
   <link rel="preload" href="fonts/OpenSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/OpenSans-SemiBold.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="fonts/ProximaNova-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/ProximaNova-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -22,6 +24,8 @@
 <path d="M1.00427 6.17188L6.91841 0.368597M1.00427 6.17188L6.69294 11.9692M1.00427 6.17188L19.9813 6.35128"></path>
 </symbol><symbol id="icon-arrow-right" viewBox="0 0 20 13">
 <path d="M18.9873 6.17188L13.0747 0.368597M18.9873 6.17188L13.3001 11.9692M18.9873 6.17188L0.0150977 6.35128"></path>
+</symbol><symbol id="icon-close" viewBox="0 0 15 16">
+<path d="M13.6399 15.0096L7.50482 8.86495L1.36977 15.0096L0 13.6399L6.14469 7.50482L0 1.36978L1.36977 0L7.50482 6.14469L13.6399 0.00964652L15 1.36978L8.86495 7.50482L15 13.6399L13.6399 15.0096Z" fill="#9F9E9E"></path>
 </symbol><symbol id="icon-engine" viewBox="0 0 24 22">
 <rect x="1.74597" y="0.75" width="10.9495" height="19.9131" rx="1.25" stroke="#48494D" stroke-width="1.5"></rect>
 <mask id="path-2-inside-1" fill="white">
@@ -88,7 +92,7 @@
 <path d="M19.9999 30.8429C21.4835 30.8429 22.6861 29.6402 22.6861 28.1567C22.6861 26.6731 21.4835 25.4705 19.9999 25.4705C18.5164 25.4705 17.3137 26.6731 17.3137 28.1567C17.3137 29.6402 18.5164 30.8429 19.9999 30.8429Z" stroke="#48494D" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
 </g>
 </symbol><symbol id="icon-star-grey" viewBox="0 0 17 16">
-<path d="M8.74375 0L10.6227 5.87336L16.7029 5.87336L11.7839 9.50329L13.6628 15.3766L8.74375 11.7467L3.82472 15.3766L5.70362 9.50329L0.784596 5.87336L6.86485 5.87336L8.74375 0Z" fill="#BDBEC2" fill-opacity="0.7"></path>
+<path d="M8.74375 0L10.6227 5.87336L16.7029 5.87336L11.7839 9.50329L13.6628 15.3766L8.74375 11.7467L3.82472 15.3766L5.70362 9.50329L0.784596 5.87336L6.86485 5.87336L8.74375 0Z"></path>
 </symbol><symbol id="icon-star-rating" viewBox="0 0 27 25">
 <path d="M13.5688 0L16.6151 9.52282H26.4734L18.4979 15.4082L21.5443 24.9311L13.5688 19.0456L5.59324 24.9311L8.63961 15.4082L0.664102 9.52282H10.5224L13.5688 0Z" fill="#BDBEC2" fill-opacity="0.7"></path>
 </symbol><symbol id="icon-star-red" viewBox="0 0 17 16">
@@ -255,8 +259,7 @@
         </li>
       </ul>
 
-      <!-- блок с характеристиками -->
-      <!-- класс для скрытия specification--not-active -->
+      <!-- блок с характеристиками, класс для скрытия specification==not-active -->
       <ul class="about__specifications-list specification">
         <li class="specification__item">
           <span class="specification__type">Трансмиссия</span>
@@ -288,8 +291,7 @@
         </li>
       </ul>
 
-      <!-- блок с отзывами -->
-      <!-- класс для скрытия comments--not-active -->
+      <!-- блок с отзывами, класс для скрытия comments==not-active -->
       <div class="about__comments comments comments--not-active">
         <a href="#" class="comments__button button button--white-short">оставить отзыв</a>
         <ul class="comments__list">
@@ -375,8 +377,7 @@
         </ul>
       </div>
 
-      <!-- блок с контактами -->
-      <!-- класс для скрытия contact--not-active -->
+      <!-- блок с контактами, класс для скрытия contact==not-active -->
       <div class="about__contact contact contact--not-active">
         <ul class="contact__list">
           <li class="contact__item">
@@ -417,15 +418,73 @@
     </div>
   </footer>
 
-  <!-- <div class="pop-up" style="position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.2);
-  overflow: hidden; //применять на body
-  ">
-  </div> -->
+  <!-- класс modal==active для отображения модального окна -->
+  <div class="modal">
+    <div class="modal__content">
+      <h2 class="modal__title">Оставить отзыв</h2>
+      <form class="modal__form form" action="somefile.php" method="post">
+
+        <div class="form__left-block">
+          <p class="form__info">Пожалуйста, заполните поле</p>
+          <label class="form__name-field-label visually-hidden" for="name" aria-label="Поле для ввода имени"></label>
+          <input class="form__input form__input--name" type="text" placeholder="Имя" name="name" required="" id="name">
+          <label class="form__merit-field-label visually-hidden" for="merit" aria-label="Поле для ввода положительных особенностей автомобиля"></label>
+          <input class="form__input form__input--merit" type="text" name="merit" id="merit" placeholder="Достоинства">
+          <input class="form__input form__input--flaw" type="text" name="flaw" id="flaw" placeholder="Недостатки">
+        </div>
+
+        <div class="form__right-block">
+          <div class="form__rating-block">
+            <input class="form__rating-input visually-hidden" name="rating" value="5" id="5-stars" type="radio">
+            <label for="5-stars" class="form__rating-label" title="perfect">
+              <svg class="form__star-image" width="27" height="27">
+                <use xlink:href="#icon-star-grey"></use>
+              </svg>
+            </label>
+
+            <input class="form__rating-input visually-hidden" name="rating" value="4" id="4-stars" type="radio">
+            <label for="4-stars" class="form__rating-label" title="good">
+              <svg class="form__star-image" width="27" height="27">
+                <use xlink:href="#icon-star-grey"></use>
+              </svg>
+            </label>
+
+            <input class="form__rating-input visually-hidden" name="rating" value="3" id="3-stars" type="radio">
+            <label for="3-stars" class="form__rating-label" title="not bad">
+              <svg class="form__star-image" width="27" height="27">
+                <use xlink:href="#icon-star-grey"></use>
+              </svg>
+            </label>
+
+            <input class="form__rating-input visually-hidden" name="rating" value="2" id="2-stars" type="radio">
+            <label for="2-stars" class="form__rating-label" title="badly">
+              <svg class="form__star-image" width="27" height="27">
+                <use xlink:href="#icon-star-grey"></use>
+              </svg>
+            </label>
+
+            <input class="form__rating-input visually-hidden" name="rating" value="1" id="1-star" type="radio">
+            <label for="1-star" class="form__rating-label form__rating-label--first" title="terribly">
+              <svg class="form__star-image" width="27" height="27">
+                <use xlink:href="#icon-star-grey"></use>
+              </svg>
+            </label>
+
+            <p class="form__title-rating">Оцените товар:</p>
+          </div>
+          <label class="form__text-area-label visually-hidden" for="comment" aria-label="Поле для комментария"></label>
+          <textarea class="form__text-area" name="comment" id="comment" placeholder="Комментарий" required=""></textarea>
+        </div>
+
+        <input class="form__submit" type="submit" value="Оставить отзыв">
+      </form>
+      <button class="modal__close">
+        <svg width="16" height="16">
+          <use xlink:href="#icon-close"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
 
 </body>
 

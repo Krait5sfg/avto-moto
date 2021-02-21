@@ -12,6 +12,8 @@
   <link rel="preload" href="fonts/OpenSans-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
   <link rel="preload" href="fonts/OpenSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/OpenSans-SemiBold.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="fonts/ProximaNova-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/ProximaNova-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -169,8 +171,7 @@
         </li>
       </ul>
 
-      <!-- блок с характеристиками -->
-      <!-- класс для скрытия specification--not-active -->
+      <!-- блок с характеристиками, класс для скрытия specification==not-active -->
       <ul class="about__specifications-list specification">
         <li class="specification__item">
           <span class="specification__type">Трансмиссия</span>
@@ -202,8 +203,7 @@
         </li>
       </ul>
 
-      <!-- блок с отзывами -->
-      <!-- класс для скрытия comments--not-active -->
+      <!-- блок с отзывами, класс для скрытия comments==not-active -->
       <div class="about__comments comments comments--not-active">
         <a href="#" class="comments__button button button--white-short">оставить отзыв</a>
         <ul class="comments__list">
@@ -289,8 +289,7 @@
         </ul>
       </div>
 
-      <!-- блок с контактами -->
-      <!-- класс для скрытия contact--not-active -->
+      <!-- блок с контактами, класс для скрытия contact==not-active -->
       <div class="about__contact contact contact--not-active">
         <ul class="contact__list">
           <li class="contact__item">
@@ -332,15 +331,74 @@
     </div>
   </footer>
 
-  <!-- <div class="pop-up" style="position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.2);
-  overflow: hidden; //применять на body
-  ">
-  </div> -->
+  <!-- класс modal==active для отображения модального окна -->
+  <div class="modal">
+    <div class="modal__content">
+      <h2 class="modal__title">Оставить отзыв</h2>
+      <form class="modal__form form" action="somefile.php" method="post">
+
+        <div class="form__left-block">
+          <p class="form__info">Пожалуйста, заполните поле</p>
+          <label class="form__name-field-label visually-hidden" for="name" aria-label="Поле для ввода имени"></label>
+          <input class="form__input form__input--name" type="text" placeholder="Имя" name="name" required id="name">
+          <label class="form__merit-field-label visually-hidden" for="merit"
+            aria-label="Поле для ввода положительных особенностей автомобиля"></label>
+          <input class="form__input form__input--merit" type="text" name="merit" id="merit" placeholder="Достоинства">
+          <input class="form__input form__input--flaw" type="text" name="flaw" id="flaw" placeholder="Недостатки">
+        </div>
+
+        <div class="form__right-block">
+          <div class="form__rating-block">
+            <input class="form__rating-input visually-hidden" name="rating" value="5" id="5-stars" type="radio">
+            <label for="5-stars" class="form__rating-label" title="perfect">
+              <svg class="form__star-image" width="27" height="27">
+                <use xlink:href="#icon-star-grey"></use>
+              </svg>
+            </label>
+
+            <input class="form__rating-input visually-hidden" name="rating" value="4" id="4-stars" type="radio">
+            <label for="4-stars" class="form__rating-label" title="good">
+              <svg class="form__star-image" width="27" height="27">
+                <use xlink:href="#icon-star-grey"></use>
+              </svg>
+            </label>
+
+            <input class="form__rating-input visually-hidden" name="rating" value="3" id="3-stars" type="radio">
+            <label for="3-stars" class="form__rating-label" title="not bad">
+              <svg class="form__star-image" width="27" height="27">
+                <use xlink:href="#icon-star-grey"></use>
+              </svg>
+            </label>
+
+            <input class="form__rating-input visually-hidden" name="rating" value="2" id="2-stars" type="radio">
+            <label for="2-stars" class="form__rating-label" title="badly">
+              <svg class="form__star-image" width="27" height="27">
+                <use xlink:href="#icon-star-grey"></use>
+              </svg>
+            </label>
+
+            <input class="form__rating-input visually-hidden" name="rating" value="1" id="1-star" type="radio">
+            <label for="1-star" class="form__rating-label form__rating-label--first" title="terribly">
+              <svg class="form__star-image" width="27" height="27">
+                <use xlink:href="#icon-star-grey"></use>
+              </svg>
+            </label>
+
+            <p class="form__title-rating">Оцените товар:</p>
+          </div>
+          <label class="form__text-area-label visually-hidden" for="comment" aria-label="Поле для комментария"></label>
+          <textarea class="form__text-area" name="comment" id="comment" placeholder="Комментарий" required></textarea>
+        </div>
+
+        <input class="form__submit" type="submit" value="Оставить отзыв">
+      </form>
+      <button class="modal__close">
+        <svg width="16" height="16">
+          <use xlink:href="#icon-close"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
 
 </body>
 
