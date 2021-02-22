@@ -92,9 +92,9 @@
 <path d="M19.9999 30.8429C21.4835 30.8429 22.6861 29.6402 22.6861 28.1567C22.6861 26.6731 21.4835 25.4705 19.9999 25.4705C18.5164 25.4705 17.3137 26.6731 17.3137 28.1567C17.3137 29.6402 18.5164 30.8429 19.9999 30.8429Z" stroke="#48494D" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
 </g>
 </symbol><symbol id="icon-star-grey" viewBox="0 0 17 16">
-<path d="M8.74375 0L10.6227 5.87336L16.7029 5.87336L11.7839 9.50329L13.6628 15.3766L8.74375 11.7467L3.82472 15.3766L5.70362 9.50329L0.784596 5.87336L6.86485 5.87336L8.74375 0Z"></path>
+<path d="M8.74375 0L10.6227 5.87336L16.7029 5.87336L11.7839 9.50329L13.6628 15.3766L8.74375 11.7467L3.82472 15.3766L5.70362 9.50329L0.784596 5.87336L6.86485 5.87336L8.74375 0Z" fill="#BDBEC2" fill-opacity="0.7"></path>
 </symbol><symbol id="icon-star-rating" viewBox="0 0 27 25">
-<path d="M13.5688 0L16.6151 9.52282H26.4734L18.4979 15.4082L21.5443 24.9311L13.5688 19.0456L5.59324 24.9311L8.63961 15.4082L0.664102 9.52282H10.5224L13.5688 0Z" fill="#BDBEC2" fill-opacity="0.7"></path>
+<path d="M13.5688 0L16.6151 9.52282H26.4734L18.4979 15.4082L21.5443 24.9311L13.5688 19.0456L5.59324 24.9311L8.63961 15.4082L0.664102 9.52282H10.5224L13.5688 0Z"></path>
 </symbol><symbol id="icon-star-red" viewBox="0 0 17 16">
 <path d="M8.36875 0L10.2477 5.87336L16.3279 5.87336L11.4089 9.50329L13.2878 15.3766L8.36875 11.7467L3.44972 15.3766L5.32862 9.50329L0.409596 5.87336L6.48985 5.87336L8.36875 0Z" fill="#D12136"></path>
 </symbol><symbol id="icon-volume" viewBox="0 0 40 40">
@@ -260,7 +260,7 @@
       </ul>
 
       <!-- блок с характеристиками, класс для скрытия specification==not-active -->
-      <ul class="about__specifications-list specification">
+      <ul class="about__specifications-list specification specification--not-active">
         <li class="specification__item">
           <span class="specification__type">Трансмиссия</span>
           <span class="specification__text">Роботизированная</span>
@@ -378,7 +378,7 @@
       </div>
 
       <!-- блок с контактами, класс для скрытия contact==not-active -->
-      <div class="about__contact contact contact--not-active">
+      <div class="about__contact contact">
         <ul class="contact__list">
           <li class="contact__item">
             <span class="contact__title">Адрес</span>
@@ -438,35 +438,35 @@
             <input class="form__rating-input visually-hidden" name="rating" value="5" id="5-stars" type="radio">
             <label for="5-stars" class="form__rating-label" title="perfect">
               <svg class="form__star-image" width="27" height="27">
-                <use xlink:href="#icon-star-grey"></use>
+                <use xlink:href="#icon-star-rating"></use>
               </svg>
             </label>
 
             <input class="form__rating-input visually-hidden" name="rating" value="4" id="4-stars" type="radio">
             <label for="4-stars" class="form__rating-label" title="good">
               <svg class="form__star-image" width="27" height="27">
-                <use xlink:href="#icon-star-grey"></use>
+                <use xlink:href="#icon-star-rating"></use>
               </svg>
             </label>
 
             <input class="form__rating-input visually-hidden" name="rating" value="3" id="3-stars" type="radio">
             <label for="3-stars" class="form__rating-label" title="not bad">
               <svg class="form__star-image" width="27" height="27">
-                <use xlink:href="#icon-star-grey"></use>
+                <use xlink:href="#icon-star-rating"></use>
               </svg>
             </label>
 
             <input class="form__rating-input visually-hidden" name="rating" value="2" id="2-stars" type="radio">
             <label for="2-stars" class="form__rating-label" title="badly">
               <svg class="form__star-image" width="27" height="27">
-                <use xlink:href="#icon-star-grey"></use>
+                <use xlink:href="#icon-star-rating"></use>
               </svg>
             </label>
 
             <input class="form__rating-input visually-hidden" name="rating" value="1" id="1-star" type="radio">
             <label for="1-star" class="form__rating-label form__rating-label--first" title="terribly">
               <svg class="form__star-image" width="27" height="27">
-                <use xlink:href="#icon-star-grey"></use>
+                <use xlink:href="#icon-star-rating"></use>
               </svg>
             </label>
 
