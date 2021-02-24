@@ -419,15 +419,16 @@
   </footer>
 
   <!-- класс modal==active для отображения модального окна -->
-  <div class="modal">
+  <div class="modal modal--active">
     <div class="modal__content">
       <h2 class="modal__title">Оставить отзыв</h2>
       <form class="modal__form form" action="somefile.php" method="post">
 
         <div class="form__left-block">
+          <!-- класс form__info==not-active скрывает предупреждающее сообщение-->
           <p class="form__info">Пожалуйста, заполните поле</p>
           <label class="form__name-field-label visually-hidden" for="name" aria-label="Поле для ввода имени"></label>
-          <input class="form__input form__input--name" type="text" placeholder="Имя" name="name" required="" id="name">
+          <input class="form__input form__input--name form__input--not-valid" type="text" placeholder="Имя" name="name" required="" id="name">
           <label class="form__merit-field-label visually-hidden" for="merit" aria-label="Поле для ввода положительных особенностей автомобиля"></label>
           <input class="form__input form__input--merit" type="text" name="merit" id="merit" placeholder="Достоинства">
           <input class="form__input form__input--flaw" type="text" name="flaw" id="flaw" placeholder="Недостатки">
@@ -472,8 +473,10 @@
 
             <p class="form__title-rating">Оцените товар:</p>
           </div>
+          <!-- класс form__info==not-active скрывает предупреждающее сообщение-->
+          <p class="form__info">Пожалуйста, заполните поле</p>
           <label class="form__text-area-label visually-hidden" for="comment" aria-label="Поле для комментария"></label>
-          <textarea class="form__text-area" name="comment" id="comment" placeholder="Комментарий" required=""></textarea>
+          <textarea class="form__text-area form__text-area--not-valid" name="comment" id="comment" placeholder="Комментарий" required=""></textarea>
         </div>
 
         <input class="form__submit" type="submit" value="Оставить отзыв">
